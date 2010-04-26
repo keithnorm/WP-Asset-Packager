@@ -1,22 +1,27 @@
 # Wordpress Asset Packager
 This plugin includes a rails style helper method for including Javascript functions. BUT, the real power is in cacheing the files into one file, and using Google Closure to optimize the cache files.
 
-    #php
-    javascript_tag('jquery.cycle', 'jquery.quicksand', 'application', array('cache' => 'cache_file'));
-    
-    #html
+So, this PHP
+
+    <?php
+      javascript_tag('jquery.cycle', 'jquery.quicksand', 'application', array('cache' => 'cache_file'));
+    ?>
+
+Generates this HTML:
+
     <script type="text/javascript" src="/path/to/theme/javascripts/cache_file.js"></script>
   
 If you don't want to use a cache file just omit the final argument.
 
-    #php
-    javascript_tag('jquery.cycle', 'jquery.quicksand', 'application');
-    
-    #html
+    <?php
+      javascript_tag('jquery.cycle', 'jquery.quicksand', 'application');
+    ?>
+
+Produces:
+
     <script type="text/javascript" src="/path/to/theme/javascripts/jquery.cycle.js"></script>
     <script type="text/javascript" src="/path/to/theme/javascripts/jquery.quicksand.js"></script>
     <script type="text/javascript" src="/path/to/theme/javascripts/application.js"></script>
-    
 
 ## TODO
   * Add support for stylesheets
