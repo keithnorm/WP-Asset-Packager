@@ -23,6 +23,10 @@ Produces:
     <script type="text/javascript" src="/path/to/theme/javascripts/jquery.quicksand.js"></script>
     <script type="text/javascript" src="/path/to/theme/javascripts/application.js"></script>
 
+## Installation
+
+Copy the asset_packager directory to your wp-content/plugins directory then activate the plugin via the admin panel. Then just use the javascript_tag function in your theme.
+
 ## TODO
   * Add support for stylesheets
   * Add WP admin section for setting compilation levels and other settings
